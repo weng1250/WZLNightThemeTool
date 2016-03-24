@@ -1,0 +1,15 @@
+//
+//  precompile.pch
+//  WZLNightThemeToolDemo
+//
+//  Created by wengzilin on 16/3/24.
+//  Copyright © 2016年 Weng-Zilin(http://www.cnblogs.com/wengzilin/). All rights reserved.
+//
+
+#ifndef precompile_pch
+#define precompile_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* precompile_pch */
