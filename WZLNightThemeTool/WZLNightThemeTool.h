@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UIView+WZLNightTheme.h"
+#import "WZLNightCategoryImport.h"
 
 static NSString *const WZLNightDidComesNotification = @"WZLNightDidComesNotification";
 static NSString *const WZLDayDidComesNotification = @"WZLDayDidComesNotification";

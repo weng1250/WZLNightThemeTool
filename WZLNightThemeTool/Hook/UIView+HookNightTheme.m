@@ -8,7 +8,7 @@
 
 #import "UIView+HookNightTheme.h"
 #import <objc/runtime.h>
-#import "UIView+WZLNightTheme.h"
+#import "WZLNightCategoryImport.h"
 #import "WZLNightThemeTool.h"
 #import "WZLNightDebug.h"
 
@@ -40,12 +40,10 @@ static UIView * WEmptyObjectToAssert() {
     [supportColorProperties enumerateObjectsUsingBlock:^(NSString *propertyName, NSUInteger idx, BOOL *stop) {
         NSString *originalSelName = [NSString stringWithFormat:@"set%@:", propertyName];
         NSString *mySwizzleSelName = [NSString stringWithFormat:@"swizzle_set%@:", propertyName];
-        WZLNightLog(@"originalSel:%@", originalSelName);
-        WZLNightLog(@"mySwizzleSelName:%@", mySwizzleSelName);
         SEL originalSel = NSSelectorFromString(originalSelName);
         SEL mySwizzleSel = NSSelectorFromString(mySwizzleSelName);
-        NSAssert([WEmptyObjectToAssert() respondsToSelector:originalSel] &&
-                 [WEmptyObjectToAssert() respondsToSelector:mySwizzleSel], @"selector does not exist!");
+        //NSAssert([WEmptyObjectToAssert() respondsToSelector:originalSel] &&
+        //         [WEmptyObjectToAssert() respondsToSelector:mySwizzleSel], @"selector does not exist!");
         [self swizzleWithOriginalSel:originalSel newSel:mySwizzleSel];
     }];
 }

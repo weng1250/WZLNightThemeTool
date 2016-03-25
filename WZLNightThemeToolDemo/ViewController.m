@@ -9,9 +9,12 @@
 #import "ViewController.h"
 #import "WZLNightThemeTool.h"
 
+#define GLOBAL_THEME_COLOR [UIColor blackColor]
+
 @interface ViewController ()
 
 @property (strong, nonatomic) IBOutlet UISwitch *themeSwitch;
+@property (strong, nonatomic) IBOutlet UILabel *textLabel;
 
 @end
 
@@ -22,6 +25,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.WZLNightBackgroundColor = [UIColor blackColor];
     self.themeSwitch.WZLNightTintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.barTintColor = GLOBAL_THEME_COLOR;
+    self.textLabel.WZLNightTextColor = [UIColor whiteColor];
 }
 
 - (IBAction)onThemeSwitchClicked:(UISwitch *)sender

@@ -134,14 +134,14 @@ static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
     }
     [self.registeredViewsDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSMutableSet *registeredViewSet, BOOL *stop) {
         NSString *WZLNightPropertyName = key;
-        NSString *WZLDayPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[WZLNightPropertyName];
+        NSString *WZLDayPropertyName = WZLNightThemeToolNightAndDayColorsMap()[WZLNightPropertyName];
         NSAssert(WZLDayPropertyName, @"property name parse error");
         
         [registeredViewSet enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
             if ([obj isKindOfClass:[UIView class]]) {
                 UIView *registeredView = (UIView *)obj;
                 if (registeredView) {
-                    NSString *systemColorPropertyName = WZLNightThemeToolSystemAndDayColorsMap()[WZLNightPropertyName];
+                    NSString *systemColorPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[WZLNightPropertyName];
                     [self applyColorWithTargetView:registeredView wzlPropertyName:WZLDayPropertyName
                                 systemPropertyName:systemColorPropertyName];
                 }
@@ -156,7 +156,7 @@ static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
     //NSAssert(dayColorValue, @"dayColorValue should not be nil");
     if (dayColorValue) {
         NSString *WZLPropertyName = WZLNightThemeToolSystemAndDayColorsMap()[name];
-        [targetView setValue:dayColorValue forKeyPath:WZLPropertyName];//通过category添加的属性无法用kvc?
+        [targetView setValue:dayColorValue forKeyPath:WZLPropertyName];//
     }
 }
 

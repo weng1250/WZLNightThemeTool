@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNO-Us-pHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="263"/>
+            <point key="canvasLocation" x="804" y="601"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="VUa-zG-WWa">
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mac-sA-XhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-397"/>
+            <point key="canvasLocation" x="804" y="-47"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bks-b7-7bC">
@@ -54,9 +54,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iJm-Pu-20F"/>
                         <segue destination="BeN-9r-rQe" kind="relationship" relationship="viewControllers" id="zfK-Ah-RPt"/>
                         <segue destination="e73-Ld-l1F" kind="relationship" relationship="viewControllers" id="Zdr-wM-6k9"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iJm-Pu-20F"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qx7-Cl-egY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -81,18 +81,25 @@
                                     <action selector="onThemeSwitchClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Ya-V1-hCe"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="这是一个文本" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RD-H8-cE7">
+                                <rect key="frame" x="57" y="326" width="195" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="upo-vs-8L4"/>
                     <navigationItem key="navigationItem" id="S7h-YY-BCU"/>
                     <connections>
+                        <outlet property="textLabel" destination="8RD-H8-cE7" id="CRy-Eu-4x4"/>
                         <outlet property="themeSwitch" destination="BEK-Ph-HWF" id="jhd-0R-Jv5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="943"/>
+            <point key="canvasLocation" x="804" y="-707"/>
         </scene>
         <!--WZLNightThemeTool-->
         <scene sceneID="rAb-BX-qQE">

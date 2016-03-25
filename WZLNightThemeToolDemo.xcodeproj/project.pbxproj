@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1906CE081CA4E0B600F8FA6F /* UIView+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE021CA4E0B600F8FA6F /* UIView+WZLNightTheme.m */; };
+		1906CE091CA4E0B600F8FA6F /* UIView+HookNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE071CA4E0B600F8FA6F /* UIView+HookNightTheme.m */; };
+		1906CE0C1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE0B1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m */; };
+		1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE0E1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m */; };
 		19F0C73C1CA290F900936081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73B1CA290F900936081 /* main.m */; };
 		19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73E1CA290F900936081 /* AppDelegate.m */; };
 		19F0C7421CA290F900936081 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* ViewController.m */; };
@@ -14,9 +18,7 @@
 		19F0C7471CA290F900936081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F0C7461CA290F900936081 /* Assets.xcassets */; };
 		19F0C74A1CA290F900936081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F0C7481CA290F900936081 /* LaunchScreen.storyboard */; };
 		19F0C7551CA290F900936081 /* WZLNightThemeToolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7541CA290F900936081 /* WZLNightThemeToolDemoTests.m */; };
-		19F0C7621CA2CA0C00936081 /* UIView+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7611CA2CA0C00936081 /* UIView+WZLNightTheme.m */; };
 		19F0C7661CA2CA6600936081 /* WZLNightThemeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7651CA2CA6600936081 /* WZLNightThemeTool.m */; };
-		19F0C7691CA2D29000936081 /* UIView+HookNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7681CA2D29000936081 /* UIView+HookNightTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +32,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1906CDF91CA3BCF300F8FA6F /* WZLNightDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightDebug.h; sourceTree = "<group>"; };
+		1906CE011CA4E0B600F8FA6F /* UIView+WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLNightTheme.h"; sourceTree = "<group>"; };
+		1906CE021CA4E0B600F8FA6F /* UIView+WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLNightTheme.m"; sourceTree = "<group>"; };
+		1906CE041CA4E0B600F8FA6F /* WZLNightDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightDebug.h; sourceTree = "<group>"; };
+		1906CE061CA4E0B600F8FA6F /* UIView+HookNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HookNightTheme.h"; sourceTree = "<group>"; };
+		1906CE071CA4E0B600F8FA6F /* UIView+HookNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HookNightTheme.m"; sourceTree = "<group>"; };
+		1906CE0A1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WZLNightTheme.h"; sourceTree = "<group>"; };
+		1906CE0B1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WZLNightTheme.m"; sourceTree = "<group>"; };
+		1906CE0D1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WZLNightTheme.h"; sourceTree = "<group>"; };
+		1906CE0E1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WZLNightTheme.m"; sourceTree = "<group>"; };
+		1906CE101CA4E24800F8FA6F /* WZLNightCategoryImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightCategoryImport.h; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,12 +56,8 @@
 		19F0C7501CA290F900936081 /* WZLNightThemeToolDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZLNightThemeToolDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C7541CA290F900936081 /* WZLNightThemeToolDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZLNightThemeToolDemoTests.m; sourceTree = "<group>"; };
 		19F0C7561CA290F900936081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19F0C7601CA2CA0C00936081 /* UIView+WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZLNightTheme.h"; sourceTree = "<group>"; };
-		19F0C7611CA2CA0C00936081 /* UIView+WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZLNightTheme.m"; sourceTree = "<group>"; };
 		19F0C7641CA2CA6600936081 /* WZLNightThemeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightThemeTool.h; sourceTree = "<group>"; };
 		19F0C7651CA2CA6600936081 /* WZLNightThemeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLNightThemeTool.m; sourceTree = "<group>"; };
-		19F0C7671CA2D29000936081 /* UIView+HookNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HookNightTheme.h"; sourceTree = "<group>"; };
-		19F0C7681CA2D29000936081 /* UIView+HookNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HookNightTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +78,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1906CE001CA4E0B600F8FA6F /* Caregory */ = {
+			isa = PBXGroup;
+			children = (
+				1906CE101CA4E24800F8FA6F /* WZLNightCategoryImport.h */,
+				1906CE011CA4E0B600F8FA6F /* UIView+WZLNightTheme.h */,
+				1906CE021CA4E0B600F8FA6F /* UIView+WZLNightTheme.m */,
+				1906CE0A1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.h */,
+				1906CE0B1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m */,
+				1906CE0D1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.h */,
+				1906CE0E1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m */,
+			);
+			path = Caregory;
+			sourceTree = "<group>";
+		};
+		1906CE031CA4E0B600F8FA6F /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				1906CE041CA4E0B600F8FA6F /* WZLNightDebug.h */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		1906CE051CA4E0B600F8FA6F /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				1906CE061CA4E0B600F8FA6F /* UIView+HookNightTheme.h */,
+				1906CE071CA4E0B600F8FA6F /* UIView+HookNightTheme.m */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
 		19F0C72E1CA290F900936081 = {
 			isa = PBXGroup;
 			children = (
@@ -127,11 +165,9 @@
 		19F0C75F1CA2911D00936081 /* WZLNightThemeTool */ = {
 			isa = PBXGroup;
 			children = (
-				1906CDF91CA3BCF300F8FA6F /* WZLNightDebug.h */,
-				19F0C7601CA2CA0C00936081 /* UIView+WZLNightTheme.h */,
-				19F0C7611CA2CA0C00936081 /* UIView+WZLNightTheme.m */,
-				19F0C7671CA2D29000936081 /* UIView+HookNightTheme.h */,
-				19F0C7681CA2D29000936081 /* UIView+HookNightTheme.m */,
+				1906CE001CA4E0B600F8FA6F /* Caregory */,
+				1906CE031CA4E0B600F8FA6F /* Debug */,
+				1906CE051CA4E0B600F8FA6F /* Hook */,
 				19F0C7641CA2CA6600936081 /* WZLNightThemeTool.h */,
 				19F0C7651CA2CA6600936081 /* WZLNightThemeTool.m */,
 			);
@@ -240,10 +276,12 @@
 			files = (
 				19F0C7421CA290F900936081 /* ViewController.m in Sources */,
 				19F0C7661CA2CA6600936081 /* WZLNightThemeTool.m in Sources */,
+				1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */,
+				1906CE081CA4E0B600F8FA6F /* UIView+WZLNightTheme.m in Sources */,
 				19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */,
+				1906CE091CA4E0B600F8FA6F /* UIView+HookNightTheme.m in Sources */,
 				19F0C73C1CA290F900936081 /* main.m in Sources */,
-				19F0C7691CA2D29000936081 /* UIView+HookNightTheme.m in Sources */,
-				19F0C7621CA2CA0C00936081 /* UIView+WZLNightTheme.m in Sources */,
+				1906CE0C1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
