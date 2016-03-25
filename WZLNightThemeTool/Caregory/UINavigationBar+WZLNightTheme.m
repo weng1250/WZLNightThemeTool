@@ -7,7 +7,32 @@
 //
 
 #import "UINavigationBar+WZLNightTheme.h"
+#import <objc/runtime.h>
+
+static NSString *const KEY_PROPERTY_WZLNIGHT_BARTINTCOLOR = @"KEY_PROPERTY_WZLNIGHT_BARTINTCOLOR";
+static NSString *const KEY_PROPERTY_WZLDAY_BARTINTCOLOR = @"KEY_PROPERTY_WZLDAY_BARTINTCOLOR";
 
 @implementation UINavigationBar (WZLNightTheme)
+@dynamic WZLDayBarTintColor,WZLNightBarTintColor;
+
+- (void)setWZLDayBarTintColor:(UIColor *)WZLDayBarTintColor
+{
+    objc_setAssociatedObject(self, &KEY_PROPERTY_WZLDAY_BARTINTCOLOR, WZLDayBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)WZLDayBarTintColor
+{
+    return objc_getAssociatedObject(self, &KEY_PROPERTY_WZLDAY_BARTINTCOLOR);
+}
+
+- (void)setWZLNightBarTintColor:(UIColor *)WZLNightBarTintColor
+{
+    objc_setAssociatedObject(self, &KEY_PROPERTY_WZLNIGHT_BARTINTCOLOR, WZLNightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIColor *)WZLNightBarTintColor
+{
+    return objc_getAssociatedObject(self, &KEY_PROPERTY_WZLNIGHT_BARTINTCOLOR);
+}
 
 @end

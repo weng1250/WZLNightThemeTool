@@ -11,3 +11,7 @@
 @interface UIView (HookNightTheme)
 
 @end
+
+@interface UILabel (HookNightTheme)
+
+@end

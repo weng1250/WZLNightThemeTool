@@ -13,6 +13,7 @@ static NSString *const KEY_PROPERTY_WZLNIGHT_TEXTCOLOR = @"KEY_PROPERTY_WZLNIGHT
 static NSString *const KEY_PROPERTY_WZLDAY_TEXTCOLOR = @"KEY_PROPERTY_WZLDAY_TEXTCOLOR";
 
 @implementation UILabel (WZLNightTheme)
+@dynamic WZLNightTextColor, WZLDayTextColor;
 
 - (void)setWZLNightTextColor:(UIColor *)WZLNightTextColor
 {

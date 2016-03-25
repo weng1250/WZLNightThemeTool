@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.WZLNightBackgroundColor = [UIColor blackColor];
     self.themeSwitch.WZLNightTintColor = [UIColor blackColor];
-    self.navigationController.navigationBar.barTintColor = GLOBAL_THEME_COLOR;
+    self.navigationController.navigationBar.WZLNightBarTintColor = GLOBAL_THEME_COLOR;
     self.textLabel.WZLNightTextColor = [UIColor whiteColor];
 }
 

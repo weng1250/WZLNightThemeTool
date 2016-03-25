@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="UMv-gz-RJY">
             <objects>
                 <viewController id="e73-Ld-l1F" sceneMemberID="viewController">
@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="iad-Yk-21Q"/>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="iad-Yk-21Q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNO-Us-pHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="804" y="601"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
         <scene sceneID="VUa-zG-WWa">
             <objects>
                 <viewController id="BeN-9r-rQe" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="d56-bh-VCk"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="d56-bh-VCk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mac-sA-XhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,7 +63,7 @@
             </objects>
             <point key="canvasLocation" x="-16" y="-67"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -90,7 +90,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="upo-vs-8L4"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="upo-vs-8L4"/>
                     <navigationItem key="navigationItem" id="S7h-YY-BCU"/>
                     <connections>
                         <outlet property="textLabel" destination="8RD-H8-cE7" id="CRy-Eu-4x4"/>

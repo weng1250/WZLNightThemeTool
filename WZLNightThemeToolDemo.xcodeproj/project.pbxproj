@@ -11,6 +11,7 @@
 		1906CE091CA4E0B600F8FA6F /* UIView+HookNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE071CA4E0B600F8FA6F /* UIView+HookNightTheme.m */; };
 		1906CE0C1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE0B1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m */; };
 		1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE0E1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m */; };
+		1906CE131CA4EA7500F8FA6F /* NSObject+HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE121CA4EA7500F8FA6F /* NSObject+HookUtility.m */; };
 		19F0C73C1CA290F900936081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73B1CA290F900936081 /* main.m */; };
 		19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73E1CA290F900936081 /* AppDelegate.m */; };
 		19F0C7421CA290F900936081 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* ViewController.m */; };
@@ -42,6 +43,8 @@
 		1906CE0D1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+WZLNightTheme.h"; sourceTree = "<group>"; };
 		1906CE0E1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+WZLNightTheme.m"; sourceTree = "<group>"; };
 		1906CE101CA4E24800F8FA6F /* WZLNightCategoryImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightCategoryImport.h; sourceTree = "<group>"; };
+		1906CE111CA4EA7500F8FA6F /* NSObject+HookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HookUtility.h"; sourceTree = "<group>"; };
+		1906CE121CA4EA7500F8FA6F /* NSObject+HookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HookUtility.m"; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 			children = (
 				1906CE061CA4E0B600F8FA6F /* UIView+HookNightTheme.h */,
 				1906CE071CA4E0B600F8FA6F /* UIView+HookNightTheme.m */,
+				1906CE111CA4EA7500F8FA6F /* NSObject+HookUtility.h */,
+				1906CE121CA4EA7500F8FA6F /* NSObject+HookUtility.m */,
 			);
 			path = Hook;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				19F0C7661CA2CA6600936081 /* WZLNightThemeTool.m in Sources */,
 				1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */,
 				1906CE081CA4E0B600F8FA6F /* UIView+WZLNightTheme.m in Sources */,
+				1906CE131CA4EA7500F8FA6F /* NSObject+HookUtility.m in Sources */,
 				19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */,
 				1906CE091CA4E0B600F8FA6F /* UIView+HookNightTheme.m in Sources */,
 				19F0C73C1CA290F900936081 /* main.m in Sources */,
