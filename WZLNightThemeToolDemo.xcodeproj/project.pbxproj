@@ -12,9 +12,11 @@
 		1906CE0C1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE0B1CA4E19D00F8FA6F /* UILabel+WZLNightTheme.m */; };
 		1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE0E1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m */; };
 		1906CE131CA4EA7500F8FA6F /* NSObject+HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE121CA4EA7500F8FA6F /* NSObject+HookUtility.m */; };
+		1906CE2B1CA8DAAF00F8FA6F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE2A1CA8DAAF00F8FA6F /* SecondViewController.m */; };
+		1906CE311CA8DAD700F8FA6F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE301CA8DAD700F8FA6F /* ThirdViewController.m */; };
 		19F0C73C1CA290F900936081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73B1CA290F900936081 /* main.m */; };
 		19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73E1CA290F900936081 /* AppDelegate.m */; };
-		19F0C7421CA290F900936081 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* ViewController.m */; };
+		19F0C7421CA290F900936081 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* FirstViewController.m */; };
 		19F0C7451CA290F900936081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F0C7431CA290F900936081 /* Main.storyboard */; };
 		19F0C7471CA290F900936081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F0C7461CA290F900936081 /* Assets.xcassets */; };
 		19F0C74A1CA290F900936081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F0C7481CA290F900936081 /* LaunchScreen.storyboard */; };
@@ -45,13 +47,17 @@
 		1906CE101CA4E24800F8FA6F /* WZLNightCategoryImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightCategoryImport.h; sourceTree = "<group>"; };
 		1906CE111CA4EA7500F8FA6F /* NSObject+HookUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HookUtility.h"; sourceTree = "<group>"; };
 		1906CE121CA4EA7500F8FA6F /* NSObject+HookUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HookUtility.m"; sourceTree = "<group>"; };
+		1906CE291CA8DAAF00F8FA6F /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		1906CE2A1CA8DAAF00F8FA6F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		1906CE2F1CA8DAD700F8FA6F /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		1906CE301CA8DAD700F8FA6F /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19F0C73D1CA290F900936081 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19F0C73E1CA290F900936081 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19F0C7401CA290F900936081 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		19F0C7411CA290F900936081 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19F0C7401CA290F900936081 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		19F0C7411CA290F900936081 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		19F0C7441CA290F900936081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19F0C7461CA290F900936081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19F0C7491CA290F900936081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,8 +144,12 @@
 			children = (
 				19F0C73D1CA290F900936081 /* AppDelegate.h */,
 				19F0C73E1CA290F900936081 /* AppDelegate.m */,
-				19F0C7401CA290F900936081 /* ViewController.h */,
-				19F0C7411CA290F900936081 /* ViewController.m */,
+				19F0C7401CA290F900936081 /* FirstViewController.h */,
+				19F0C7411CA290F900936081 /* FirstViewController.m */,
+				1906CE291CA8DAAF00F8FA6F /* SecondViewController.h */,
+				1906CE2A1CA8DAAF00F8FA6F /* SecondViewController.m */,
+				1906CE2F1CA8DAD700F8FA6F /* ThirdViewController.h */,
+				1906CE301CA8DAD700F8FA6F /* ThirdViewController.m */,
 				19F0C7431CA290F900936081 /* Main.storyboard */,
 				19F0C7461CA290F900936081 /* Assets.xcassets */,
 				19F0C7481CA290F900936081 /* LaunchScreen.storyboard */,
@@ -279,10 +289,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19F0C7421CA290F900936081 /* ViewController.m in Sources */,
+				1906CE2B1CA8DAAF00F8FA6F /* SecondViewController.m in Sources */,
+				19F0C7421CA290F900936081 /* FirstViewController.m in Sources */,
 				19F0C7661CA2CA6600936081 /* WZLNightThemeTool.m in Sources */,
 				1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */,
 				1906CE081CA4E0B600F8FA6F /* UIView+WZLNightTheme.m in Sources */,
+				1906CE311CA8DAD700F8FA6F /* ThirdViewController.m in Sources */,
 				1906CE131CA4EA7500F8FA6F /* NSObject+HookUtility.m in Sources */,
 				19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */,
 				1906CE091CA4E0B600F8FA6F /* UIView+HookNightTheme.m in Sources */,
