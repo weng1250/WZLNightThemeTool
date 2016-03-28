@@ -51,6 +51,7 @@
 		1906CE2A1CA8DAAF00F8FA6F /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		1906CE2F1CA8DAD700F8FA6F /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		1906CE301CA8DAD700F8FA6F /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		1906CE321CA8DC5F00F8FA6F /* AppThemeColorDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppThemeColorDefines.h; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		19F0C7391CA290F900936081 /* WZLNightThemeToolDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1906CE321CA8DC5F00F8FA6F /* AppThemeColorDefines.h */,
 				19F0C73D1CA290F900936081 /* AppDelegate.h */,
 				19F0C73E1CA290F900936081 /* AppDelegate.m */,
 				19F0C7401CA290F900936081 /* FirstViewController.h */,

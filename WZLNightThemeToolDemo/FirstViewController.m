@@ -8,8 +8,7 @@
 
 #import "FirstViewController.h"
 #import "WZLNightThemeTool.h"
-
-#define GLOBAL_THEME_COLOR [UIColor blackColor]
+#import "AppThemeColorDefines.h"
 
 @interface FirstViewController ()
 
