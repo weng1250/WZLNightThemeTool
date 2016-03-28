@@ -16,8 +16,9 @@ static NSDictionary * WZLNightThemeToolNightAndSystemColorsMap() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _WZLNightThemeToolNightAndSystemColorsMap = @{@"WZLNightBackgroundColor" : @"backgroundColor",
-                                        @"WZLNightTintColor" : @"tintColor",
-                                        @"WZLNightTextColor" : @"textColor"};
+                                                            @"WZLNightTintColor" : @"tintColor",
+                                                            @"WZLNightTextColor" : @"textColor",
+                                                        @"WZLNightBarTintColor" : @"barTintColor"};
     });
     return _WZLNightThemeToolNightAndSystemColorsMap;
 }
@@ -27,8 +28,9 @@ static NSDictionary * WZLNightThemeToolSystemAndDayColorsMap() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _WZLNightThemeToolSystemAndDayColorsMap = @{@"backgroundColor" : @"WZLDayBackgroundColor",
-                                           @"tintColor" : @"WZLDayTintColor",
-                                           @"textColor" : @"WZLDayTextColor"};
+                                                    @"tintColor" : @"WZLDayTintColor",
+                                                    @"textColor" : @"WZLDayTextColor",
+                                                    @"barTintColor" : @"WZLDayBarTintColor"};
     });
     return _WZLNightThemeToolSystemAndDayColorsMap;
 }
@@ -39,7 +41,8 @@ static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
     dispatch_once(&onceToken, ^{
         _WZLNightThemeToolNightAndDayColorsMap = @{@"WZLNightBackgroundColor" : @"WZLDayBackgroundColor",
                                                    @"WZLNightTintColor" : @"WZLDayTintColor",
-                                                   @"WZLNightTextColor" : @"WZLDayTextColor"};
+                                                   @"WZLNightTextColor" : @"WZLDayTextColor",
+                                                   @"WZLNightBarTintColor" : @"WZLDayBarTintColor"};
     });
     return _WZLNightThemeToolNightAndDayColorsMap;
 }
@@ -152,7 +155,10 @@ static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
 
 - (void)backupDayColorBeforeChangingToNight:(UIView *)targetView systemPropertyName:(NSString *)name
 {
-    id dayColorValue = [targetView valueForKeyPath:name];
+    NSParameterAssert(targetView);
+    NSParameterAssert(name);
+    id dayColorValue = [targetView valueForKeyPath:name];//dayColor may be nil, such as barTintColor.
+    dayColorValue = [self replaceNilColorValueWithDefaultDayColorIfNeed:dayColorValue];
     //NSAssert(dayColorValue, @"dayColorValue should not be nil");
     if (dayColorValue) {
         NSString *WZLPropertyName = WZLNightThemeToolSystemAndDayColorsMap()[name];
@@ -165,10 +171,23 @@ static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
                       wzlPropertyName:(NSString *)WZLPropertyName
               systemPropertyName:(NSString *)sysPropertyName
 {
+    NSParameterAssert(targetView);
+    NSParameterAssert(WZLPropertyName);
+    NSParameterAssert(sysPropertyName);
+    NSAssert([WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolNightAndSystemColorsMap() count] &&
+             [WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolSystemAndDayColorsMap() count], @"some color property may be left.");
     id WZLColorValue = [targetView valueForKeyPath:WZLPropertyName];
     if (WZLColorValue) {
         [targetView setValue:WZLColorValue forKeyPath:sysPropertyName];
     }
+}
+
+- (UIColor *)replaceNilColorValueWithDefaultDayColorIfNeed:(UIColor *)color
+{
+    if (color == nil) {
+        return [UIColor whiteColor];
+    }
+    return color;
 }
 
 @end
