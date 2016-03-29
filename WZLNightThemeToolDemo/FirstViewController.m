@@ -22,20 +22,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.WZLNightBackgroundColor = [UIColor blackColor];
-    self.themeSwitch.WZLNightTintColor = [UIColor blackColor];
-    self.navigationController.navigationBar.WZLNightBarTintColor = GLOBAL_THEME_COLOR;
-    self.textLabel.WZLNightTextColor = [UIColor whiteColor];
+    [self setupViews];
+}
+
+- (void)setupViews
+{
+    UIBarButtonItem *rightNaviItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(onNextItemPressed:)];
+    self.navigationController.navigationItem.rightBarButtonItem = rightNaviItem;
+    self.title = @"sss";
+    self.navigationController.navigationBar.WZLNightBarTintColor = THEME_NIGHT_BACKGROUND_COLOR;
+    self.view.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
+    self.themeSwitch.WZLNightTintColor = THEME_NIGHT_BACKGROUND_COLOR;
+    self.textLabel.WZLNightTextColor = THEME_NIGHT_TEXT_COLOR;
 }
 
 - (IBAction)onThemeSwitchClicked:(UISwitch *)sender
 {
-    NSLog(@"navi bar color:%@", self.navigationController.navigationBar.barTintColor);
+    NSLog(@"navi bar color:%@", self.navigationController.navigationBar.tintColor);
     if (sender.on) {
         [WZLNightThemeTool nightComes];
     } else {
         [WZLNightThemeTool dayComes];
     }
+}
+- (IBAction)onNextItemPressed:(id)sender
+{
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *nextVC = [sb instantiateViewControllerWithIdentifier:NSStringFromClass([self class])];
+    nextVC.title = @"Detail ViewController";
+    [self.navigationController pushViewController:nextVC animated:YES];
 }
 
 @end

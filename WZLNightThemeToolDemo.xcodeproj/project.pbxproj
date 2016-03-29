@@ -14,6 +14,7 @@
 		1906CE131CA4EA7500F8FA6F /* NSObject+HookUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE121CA4EA7500F8FA6F /* NSObject+HookUtility.m */; };
 		1906CE2B1CA8DAAF00F8FA6F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE2A1CA8DAAF00F8FA6F /* SecondViewController.m */; };
 		1906CE311CA8DAD700F8FA6F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE301CA8DAD700F8FA6F /* ThirdViewController.m */; };
+		1953A00B1CA9692A007BD46C /* WZLNightThemeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A00A1CA9692A007BD46C /* WZLNightThemeTool.m */; };
 		19F0C73C1CA290F900936081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73B1CA290F900936081 /* main.m */; };
 		19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73E1CA290F900936081 /* AppDelegate.m */; };
 		19F0C7421CA290F900936081 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* FirstViewController.m */; };
@@ -21,7 +22,6 @@
 		19F0C7471CA290F900936081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19F0C7461CA290F900936081 /* Assets.xcassets */; };
 		19F0C74A1CA290F900936081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F0C7481CA290F900936081 /* LaunchScreen.storyboard */; };
 		19F0C7551CA290F900936081 /* WZLNightThemeToolDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7541CA290F900936081 /* WZLNightThemeToolDemoTests.m */; };
-		19F0C7661CA2CA6600936081 /* WZLNightThemeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7651CA2CA6600936081 /* WZLNightThemeTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +52,8 @@
 		1906CE2F1CA8DAD700F8FA6F /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		1906CE301CA8DAD700F8FA6F /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		1906CE321CA8DC5F00F8FA6F /* AppThemeColorDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppThemeColorDefines.h; sourceTree = "<group>"; };
+		1953A0091CA9692A007BD46C /* WZLNightThemeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightThemeTool.h; sourceTree = "<group>"; };
+		1953A00A1CA9692A007BD46C /* WZLNightThemeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLNightThemeTool.m; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,8 +68,6 @@
 		19F0C7501CA290F900936081 /* WZLNightThemeToolDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZLNightThemeToolDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C7541CA290F900936081 /* WZLNightThemeToolDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZLNightThemeToolDemoTests.m; sourceTree = "<group>"; };
 		19F0C7561CA290F900936081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19F0C7641CA2CA6600936081 /* WZLNightThemeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightThemeTool.h; sourceTree = "<group>"; };
-		19F0C7651CA2CA6600936081 /* WZLNightThemeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLNightThemeTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +119,15 @@
 				1906CE121CA4EA7500F8FA6F /* NSObject+HookUtility.m */,
 			);
 			path = Hook;
+			sourceTree = "<group>";
+		};
+		1953A0081CA9692A007BD46C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1953A0091CA9692A007BD46C /* WZLNightThemeTool.h */,
+				1953A00A1CA9692A007BD46C /* WZLNightThemeTool.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		19F0C72E1CA290F900936081 = {
@@ -182,11 +191,10 @@
 		19F0C75F1CA2911D00936081 /* WZLNightThemeTool */ = {
 			isa = PBXGroup;
 			children = (
+				1953A0081CA9692A007BD46C /* Manager */,
 				1906CE001CA4E0B600F8FA6F /* Caregory */,
 				1906CE031CA4E0B600F8FA6F /* Debug */,
 				1906CE051CA4E0B600F8FA6F /* Hook */,
-				19F0C7641CA2CA6600936081 /* WZLNightThemeTool.h */,
-				19F0C7651CA2CA6600936081 /* WZLNightThemeTool.m */,
 			);
 			path = WZLNightThemeTool;
 			sourceTree = "<group>";
@@ -293,10 +301,10 @@
 			files = (
 				1906CE2B1CA8DAAF00F8FA6F /* SecondViewController.m in Sources */,
 				19F0C7421CA290F900936081 /* FirstViewController.m in Sources */,
-				19F0C7661CA2CA6600936081 /* WZLNightThemeTool.m in Sources */,
 				1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */,
 				1906CE081CA4E0B600F8FA6F /* UIView+WZLNightTheme.m in Sources */,
 				1906CE311CA8DAD700F8FA6F /* ThirdViewController.m in Sources */,
+				1953A00B1CA9692A007BD46C /* WZLNightThemeTool.m in Sources */,
 				1906CE131CA4EA7500F8FA6F /* NSObject+HookUtility.m in Sources */,
 				19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */,
 				1906CE091CA4E0B600F8FA6F /* UIView+HookNightTheme.m in Sources */,
