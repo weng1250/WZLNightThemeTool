@@ -9,8 +9,11 @@
 #import "SecondViewController.h"
 #import "WZLNightTheme.h"
 #import "AppThemeColorDefines.h"
+#import "TableViewDataSource.h"
 
 @interface SecondViewController ()
+
+@property (nonatomic, strong) TableViewDataSource *dataSource;
 
 @end
 
@@ -19,7 +22,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
+    [self setupTableView];
+}
+
+- (void)setupTableView
+{
+    NSMutableArray *items = [NSMutableArray array];
+    for (NSInteger i = 0; i < 50; i++) {
+        [items addObject:@"WZLNightTheme is an easy-to-use theme management tool."];
+    }
+    self.dataSource = [[TableViewDataSource alloc] initWithItems:items];
+    self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self.dataSource;
+    //configure tableview night color
+    self.tableView.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
 }
 
 @end

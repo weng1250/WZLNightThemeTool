@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface TableViewDataSource : NSObject<UITableViewDataSource>
+@interface TableViewDataSource : NSObject<UITableViewDataSource, UITableViewDelegate>
+
+- (instancetype)initWithItems:(NSArray *)items;
 
 @end

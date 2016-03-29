@@ -25,23 +25,33 @@
             <point key="canvasLocation" x="804" y="601"/>
         </scene>
         <!--Second View Controller-->
-        <scene sceneID="VUa-zG-WWa">
+        <scene sceneID="CRp-GF-Aal">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BeN-9r-rQe" customClass="SecondViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OvK-G1-PxN"/>
-                        <viewControllerLayoutGuide type="bottom" id="zUa-9d-6TQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1Sy-3N-63Z">
+                <tableViewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dLf-bn-ryd" customClass="SecondViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5nd-8K-mWP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="d56-bh-VCk"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mac-sA-XhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wiy-js-fA5">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wiy-js-fA5" id="EIH-Ww-fA0">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dLf-bn-ryd" id="z0E-tH-DKP"/>
+                            <outlet property="delegate" destination="dLf-bn-ryd" id="QKK-Mu-y8k"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="GFY-Ff-FuO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="230-oe-ySO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="-47"/>
+            <point key="canvasLocation" x="804" y="-82"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bks-b7-7bC">
@@ -55,7 +65,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Awu-oC-3uU" kind="relationship" relationship="viewControllers" id="AGE-bY-1X7"/>
-                        <segue destination="BeN-9r-rQe" kind="relationship" relationship="viewControllers" id="zfK-Ah-RPt"/>
+                        <segue destination="dLf-bn-ryd" kind="relationship" relationship="viewControllers" id="xwK-SD-oSj"/>
                         <segue destination="e73-Ld-l1F" kind="relationship" relationship="viewControllers" id="Zdr-wM-6k9"/>
                     </connections>
                 </tabBarController>

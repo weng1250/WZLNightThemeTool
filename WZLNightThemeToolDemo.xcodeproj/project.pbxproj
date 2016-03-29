@@ -17,6 +17,7 @@
 		1953A00B1CA9692A007BD46C /* WZLNightThemeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A00A1CA9692A007BD46C /* WZLNightThemeTool.m */; };
 		1953A03F1CAA5864007BD46C /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A03E1CAA5864007BD46C /* TableViewDataSource.m */; };
 		1953A0441CAA65B1007BD46C /* WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A0431CAA65B1007BD46C /* WZLNightTheme.m */; };
+		1953A0461CAA7409007BD46C /* logo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1953A0451CAA7409007BD46C /* logo@2x.jpg */; };
 		19F0C73C1CA290F900936081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73B1CA290F900936081 /* main.m */; };
 		19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73E1CA290F900936081 /* AppDelegate.m */; };
 		19F0C7421CA290F900936081 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* FirstViewController.m */; };
@@ -61,6 +62,7 @@
 		1953A0411CAA6081007BD46C /* WZLNightConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightConstants.h; sourceTree = "<group>"; };
 		1953A0421CAA65B1007BD46C /* WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightTheme.h; sourceTree = "<group>"; };
 		1953A0431CAA65B1007BD46C /* WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLNightTheme.m; sourceTree = "<group>"; };
+		1953A0451CAA7409007BD46C /* logo@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo@2x.jpg"; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		19F0C73A1CA290F900936081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1953A0451CAA7409007BD46C /* logo@2x.jpg */,
 				19F0C73B1CA290F900936081 /* main.m */,
 				19EBE2971CA3843C00BBFE89 /* precompile.pch */,
 			);
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19F0C74A1CA290F900936081 /* LaunchScreen.storyboard in Resources */,
+				1953A0461CAA7409007BD46C /* logo@2x.jpg in Resources */,
 				19F0C7471CA290F900936081 /* Assets.xcassets in Resources */,
 				19F0C7451CA290F900936081 /* Main.storyboard in Resources */,
 			);
