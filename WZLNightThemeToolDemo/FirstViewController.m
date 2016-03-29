@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Home";
     [self setupViews];
 }
 
@@ -29,7 +30,6 @@
 {
     UIBarButtonItem *rightNaviItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(onNextItemPressed:)];
     self.navigationController.navigationItem.rightBarButtonItem = rightNaviItem;
-    self.title = @"sss";
     self.navigationController.navigationBar.WZLNightBarTintColor = THEME_NIGHT_BACKGROUND_COLOR;
     self.view.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
     self.themeSwitch.WZLNightTintColor = THEME_NIGHT_BACKGROUND_COLOR;

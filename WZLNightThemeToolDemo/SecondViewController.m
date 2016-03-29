@@ -20,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
-    self.title = @"sss";
 }
 
 @end
