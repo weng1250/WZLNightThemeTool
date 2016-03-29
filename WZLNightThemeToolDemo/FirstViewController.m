@@ -30,7 +30,7 @@
 {
     UIBarButtonItem *rightNaviItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(onNextItemPressed:)];
     self.navigationController.navigationItem.rightBarButtonItem = rightNaviItem;
-    self.navigationController.navigationBar.WZLNightBarTintColor = THEME_NIGHT_BACKGROUND_COLOR;
+    self.navigationController.navigationBar.WZLNightBarTintColor = THEME_NIGHT_NAVIBAR_COLOR;
     self.view.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
     self.themeSwitch.WZLNightTintColor = THEME_NIGHT_BACKGROUND_COLOR;
     self.textLabel.WZLNightTextColor = THEME_NIGHT_TEXT_COLOR;

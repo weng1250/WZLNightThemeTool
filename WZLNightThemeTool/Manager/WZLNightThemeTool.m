@@ -8,59 +8,30 @@
 
 #import "WZLNightThemeTool.h"
 #import <objc/runtime.h>
+#import "WZLNightConstants.h"
 
-#define SELF_INSTANCE       [WZLNightThemeTool sharedInstance]
-
-static NSDictionary * WZLNightThemeToolNightAndSystemColorsMap() {
-    static NSDictionary *_WZLNightThemeToolNightAndSystemColorsMap = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _WZLNightThemeToolNightAndSystemColorsMap = @{@"WZLNightBackgroundColor" : @"backgroundColor",
-                                                            @"WZLNightTintColor" : @"tintColor",
-                                                            @"WZLNightTextColor" : @"textColor",
-                                                        @"WZLNightBarTintColor" : @"barTintColor"};
-    });
-    return _WZLNightThemeToolNightAndSystemColorsMap;
-}
-
-static NSDictionary * WZLNightThemeToolSystemAndDayColorsMap() {
-    static NSDictionary *_WZLNightThemeToolSystemAndDayColorsMap = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _WZLNightThemeToolSystemAndDayColorsMap = @{@"backgroundColor" : @"WZLDayBackgroundColor",
-                                                    @"tintColor" : @"WZLDayTintColor",
-                                                    @"textColor" : @"WZLDayTextColor",
-                                                    @"barTintColor" : @"WZLDayBarTintColor"};
-    });
-    return _WZLNightThemeToolSystemAndDayColorsMap;
-}
-
-static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
-    static NSDictionary *_WZLNightThemeToolNightAndDayColorsMap = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _WZLNightThemeToolNightAndDayColorsMap = @{@"WZLNightBackgroundColor" : @"WZLDayBackgroundColor",
-                                                   @"WZLNightTintColor" : @"WZLDayTintColor",
-                                                   @"WZLNightTextColor" : @"WZLDayTextColor",
-                                                   @"WZLNightBarTintColor" : @"WZLDayBarTintColor"};
-    });
-    return _WZLNightThemeToolNightAndDayColorsMap;
-}
-
-
+#define SELF_INSTANCE               [WZLNightThemeTool sharedInstance]
 
 @interface WZLNightThemeTool ()
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSMutableSet *> *registeredViewsDict;
 
+/**
+ *  To record current mode
+ */
+@property (nonatomic, assign) WZLThemeMode currenThemeMode;
+
 @end
 
 @implementation WZLNightThemeTool
+
+@synthesize currenThemeMode = _currenThemeMode;
 
 - (instancetype)init
 {
     if (self = [super init]) {
         _registeredViewsDict = [[NSMutableDictionary alloc] init];
+        _currenThemeMode = WZLThemeModeNotInit;
     }
     return self;
 }
@@ -95,12 +66,14 @@ static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
 
 + (void)nightComes
 {
+    [SELF_INSTANCE setCurrenThemeMode:WZLThemeModeNight];
     [SELF_INSTANCE enumerateToChangeToNightTheme];
     [[NSNotificationCenter defaultCenter] postNotificationName:WZLNightDidComesNotification object:nil];
 }
 
 + (void)dayComes
 {
+    [SELF_INSTANCE setCurrenThemeMode:WZLThemeModeDay];
     [SELF_INSTANCE enumerateToChangeToDayTheme];
     [[NSNotificationCenter defaultCenter] postNotificationName:WZLDayDidComesNotification object:nil];
 }
@@ -184,10 +157,32 @@ static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
 
 - (UIColor *)replaceNilColorValueWithDefaultDayColorIfNeed:(UIColor *)color
 {
+    //in case color has no initial value
     if (color == nil) {
         return [UIColor whiteColor];
     }
     return color;
 }
+
+#pragma mark - setter and getter
+- (WZLThemeMode)currenThemeMode
+{
+    if (_currenThemeMode == WZLThemeModeNotInit) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_THEME_MODE]) {
+            return [[[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_THEME_MODE] integerValue];
+        }
+        return WZLThemeModeDay;
+    } else {
+        return _currenThemeMode;//read from memory directly
+    }
+}
+
+- (void)setCurrenThemeMode:(WZLThemeMode)currenThemeMode
+{
+    _currenThemeMode = currenThemeMode;
+    [[NSUserDefaults standardUserDefaults] setObject:@(currenThemeMode) forKey:UD_KEY_THEME_MODE];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 
 @end

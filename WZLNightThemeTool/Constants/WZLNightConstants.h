@@ -17,7 +17,13 @@ typedef NS_ENUM (NSInteger, WZLThemeMode)
     WZLThemeModeNight
 };
 
-#define UD_KEY_IS_NIGHT_MODE        @"UD_KEY_IS_NIGHT_MODE"
+
+#pragma mark - key string define
+
+#define UD_KEY_THEME_MODE        @"UD_KEY_THEME_MODE"
+
+
+#pragma mark - map define
 
 static NSDictionary * WZLNightThemeToolNightAndSystemColorsMap() {
     static NSDictionary *_WZLNightThemeToolNightAndSystemColorsMap = nil;
