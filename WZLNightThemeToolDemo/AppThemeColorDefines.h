@@ -9,6 +9,7 @@
 #ifndef AppThemeColorDefines_h
 #define AppThemeColorDefines_h
 
+#define THEME_NIGHT_NAVIBAR_COLOR       [UIColor blackColor]
 #define THEME_NIGHT_BACKGROUND_COLOR    [UIColor blackColor]
 #define THEME_NIGHT_TEXT_COLOR          [UIColor whiteColor]
 
