@@ -9,6 +9,7 @@
 #import "WZLNightThemeTool.h"
 #import <objc/runtime.h>
 #import "WZLNightConstants.h"
+#import "WZLNightCategoryImport.h"
 
 #define SELF_INSTANCE               [WZLNightThemeTool sharedInstance]
 
@@ -64,17 +65,28 @@
     [SELF_INSTANCE.registeredViewsDict setObject:correspondingSet forKey:propName];
 }
 
++ (void)changeToNightRightNowIfNeedWithView:(id)view propertyName:(NSString *)propName
+{
+    NSParameterAssert(view);
+    if (SELF_INSTANCE.currenThemeMode == WZLThemeModeNight) {
+        NSString *systemColorPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[propName];
+        [SELF_INSTANCE backupDayColorBeforeChangingToNight:view systemPropertyName:systemColorPropertyName];
+        [SELF_INSTANCE applyColorWithTargetView:view wzlPropertyName:propName
+                    systemPropertyName:systemColorPropertyName];
+    }
+}
+
 + (void)nightComes
 {
-    [SELF_INSTANCE setCurrenThemeMode:WZLThemeModeNight];
     [SELF_INSTANCE enumerateToChangeToNightTheme];
+    [SELF_INSTANCE setCurrenThemeMode:WZLThemeModeNight];
     [[NSNotificationCenter defaultCenter] postNotificationName:WZLNightDidComesNotification object:nil];
 }
 
 + (void)dayComes
 {
-    [SELF_INSTANCE setCurrenThemeMode:WZLThemeModeDay];
     [SELF_INSTANCE enumerateToChangeToDayTheme];
+    [SELF_INSTANCE setCurrenThemeMode:WZLThemeModeDay];
     [[NSNotificationCenter defaultCenter] postNotificationName:WZLDayDidComesNotification object:nil];
 }
 
@@ -82,7 +94,7 @@
 
 - (void)enumerateToChangeToNightTheme
 {
-    if (self.registeredViewsDict == nil || [self.registeredViewsDict count] == 0) {
+    if (_currenThemeMode == WZLThemeModeNight || self.registeredViewsDict == nil || [self.registeredViewsDict count] == 0) {
         return;
     }
     
@@ -105,7 +117,7 @@
 
 - (void)enumerateToChangeToDayTheme
 {
-    if (self.registeredViewsDict == nil || [self.registeredViewsDict count] == 0) {
+    if (_currenThemeMode == WZLThemeModeDay || self.registeredViewsDict == nil || [self.registeredViewsDict count] == 0) {
         return;
     }
     [self.registeredViewsDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSMutableSet *registeredViewSet, BOOL *stop) {
@@ -132,14 +144,13 @@
     NSParameterAssert(name);
     id dayColorValue = [targetView valueForKeyPath:name];//dayColor may be nil, such as barTintColor.
     dayColorValue = [self replaceNilColorValueWithDefaultDayColorIfNeed:dayColorValue];
-    //NSAssert(dayColorValue, @"dayColorValue should not be nil");
     if (dayColorValue) {
         NSString *WZLPropertyName = WZLNightThemeToolSystemAndDayColorsMap()[name];
         [targetView setValue:dayColorValue forKeyPath:WZLPropertyName];//
     }
 }
 
-//lines blow  the same effect as to "targetView.backgroundColor = targetView.WZLNightColor;"
+//lines blow have the same effect as to "targetView.backgroundColor = targetView.WZLNightColor;"
 - (void)applyColorWithTargetView:(UIView *)targetView
                       wzlPropertyName:(NSString *)WZLPropertyName
               systemPropertyName:(NSString *)sysPropertyName

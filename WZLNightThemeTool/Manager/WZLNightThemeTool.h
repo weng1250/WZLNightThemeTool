@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WZLNightCategoryImport.h"
 
 static NSString *const WZLNightDidComesNotification = @"WZLNightDidComesNotification";
 static NSString *const WZLDayDidComesNotification = @"WZLDayDidComesNotification";
@@ -15,6 +14,8 @@ static NSString *const WZLDayDidComesNotification = @"WZLDayDidComesNotification
 @interface WZLNightThemeTool : NSObject
 
 + (void)registerNightWithView:(id)view propertyName:(NSString *)propName;
+
++ (void)changeToNightRightNowIfNeedWithView:(id)view propertyName:(NSString *)propName;
 
 + (void)nightComes;
 

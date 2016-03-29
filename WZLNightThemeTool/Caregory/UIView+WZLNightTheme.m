@@ -7,6 +7,7 @@
 //
 
 #import "UIView+WZLNightTheme.h"
+#import "WZLNightThemeTool.h"
 #import <objc/runtime.h>
 
 static NSString *const KEY_PROPERTY_WZLNIGHT_BACKGROUNDCOLOR = @"KEY_PROPERTY_WZLNIGHT_BACKGROUNDCOLOR";
@@ -23,6 +24,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_TINTCOLOR = @"KEY_PROPERTY_WZLDAY_TIN
 - (void)setWZLNightBackgroundColor:(UIColor *)color
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLNIGHT_BACKGROUNDCOLOR, color, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [WZLNightThemeTool changeToNightRightNowIfNeedWithView:self propertyName:@"WZLNightBackgroundColor"];
 }
 
 - (UIColor *)WZLNightBackgroundColor

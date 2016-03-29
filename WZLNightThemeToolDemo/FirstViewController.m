@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-#import "WZLNightThemeTool.h"
+#import "WZLNightTheme.h"
 #import "AppThemeColorDefines.h"
 
 @interface FirstViewController ()
@@ -40,9 +40,9 @@
 {
     NSLog(@"navi bar color:%@", self.navigationController.navigationBar.tintColor);
     if (sender.on) {
-        [WZLNightThemeTool nightComes];
+        [WZLNightTheme nightComes];
     } else {
-        [WZLNightThemeTool dayComes];
+        [WZLNightTheme dayComes];
     }
 }
 - (IBAction)onNextItemPressed:(id)sender

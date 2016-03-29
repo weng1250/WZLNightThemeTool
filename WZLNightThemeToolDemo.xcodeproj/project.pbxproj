@@ -16,6 +16,7 @@
 		1906CE311CA8DAD700F8FA6F /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1906CE301CA8DAD700F8FA6F /* ThirdViewController.m */; };
 		1953A00B1CA9692A007BD46C /* WZLNightThemeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A00A1CA9692A007BD46C /* WZLNightThemeTool.m */; };
 		1953A03F1CAA5864007BD46C /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A03E1CAA5864007BD46C /* TableViewDataSource.m */; };
+		1953A0441CAA65B1007BD46C /* WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A0431CAA65B1007BD46C /* WZLNightTheme.m */; };
 		19F0C73C1CA290F900936081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73B1CA290F900936081 /* main.m */; };
 		19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73E1CA290F900936081 /* AppDelegate.m */; };
 		19F0C7421CA290F900936081 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* FirstViewController.m */; };
@@ -58,6 +59,8 @@
 		1953A03D1CAA5864007BD46C /* TableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
 		1953A03E1CAA5864007BD46C /* TableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
 		1953A0411CAA6081007BD46C /* WZLNightConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightConstants.h; sourceTree = "<group>"; };
+		1953A0421CAA65B1007BD46C /* WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightTheme.h; sourceTree = "<group>"; };
+		1953A0431CAA65B1007BD46C /* WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLNightTheme.m; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				1906CE001CA4E0B600F8FA6F /* Caregory */,
 				1906CE031CA4E0B600F8FA6F /* Debug */,
 				1906CE051CA4E0B600F8FA6F /* Hook */,
+				1953A0421CAA65B1007BD46C /* WZLNightTheme.h */,
+				1953A0431CAA65B1007BD46C /* WZLNightTheme.m */,
 			);
 			path = WZLNightThemeTool;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				1906CE081CA4E0B600F8FA6F /* UIView+WZLNightTheme.m in Sources */,
 				1906CE311CA8DAD700F8FA6F /* ThirdViewController.m in Sources */,
 				1953A00B1CA9692A007BD46C /* WZLNightThemeTool.m in Sources */,
+				1953A0441CAA65B1007BD46C /* WZLNightTheme.m in Sources */,
 				1953A03F1CAA5864007BD46C /* TableViewDataSource.m in Sources */,
 				1906CE131CA4EA7500F8FA6F /* NSObject+HookUtility.m in Sources */,
 				19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */,

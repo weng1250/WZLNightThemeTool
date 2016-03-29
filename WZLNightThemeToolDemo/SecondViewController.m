@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-#import "WZLNightThemeTool.h"
+#import "WZLNightTheme.h"
 #import "AppThemeColorDefines.h"
 
 @interface SecondViewController ()
