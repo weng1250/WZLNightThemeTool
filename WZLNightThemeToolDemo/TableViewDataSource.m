@@ -45,13 +45,17 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.imageView.image = [UIImage imageNamed:@"logo.jpg"];
     cell.textLabel.text = self.dataItems[indexPath.row];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.WZLNightTextColor = THEME_NIGHT_TEXT_COLOR;
+    cell.textLabel.WZLDayTextColor = THEME_DAY_TEXT_COLOR;
     cell.contentView.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
+    cell.contentView.WZLDayBackgroundColor = THEME_DAY_BACKGROUND_COLOR;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    return 140;
 }
 
 @end

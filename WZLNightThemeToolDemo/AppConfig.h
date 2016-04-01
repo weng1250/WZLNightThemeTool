@@ -10,4 +10,8 @@
 
 @interface AppConfig : NSObject
 
+@property (nonatomic, assign) BOOL isInNightMode;
+
++ (AppConfig *)sharedInstance;
+
 @end

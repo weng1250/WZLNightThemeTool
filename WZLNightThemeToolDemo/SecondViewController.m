@@ -36,6 +36,7 @@
     self.tableView.delegate = self.dataSource;
     //configure tableview night color
     self.tableView.WZLNightBackgroundColor = THEME_NIGHT_BACKGROUND_COLOR;
+    self.tableView.WZLDayBackgroundColor = THEME_DAY_BACKGROUND_COLOR;
 }
 
 @end
