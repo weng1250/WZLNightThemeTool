@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) UIColor *WZLNightTextColor;
 
-#pragma mark - internal
 @property (nonatomic, strong) UIColor *WZLDayTextColor;
 
 @end

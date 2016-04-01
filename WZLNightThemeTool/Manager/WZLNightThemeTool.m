@@ -163,8 +163,7 @@
     NSParameterAssert(targetView);
     NSParameterAssert(WZLPropertyName);
     NSParameterAssert(sysPropertyName);
-    NSAssert([WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolNightAndSystemColorsMap() count] &&
-             [WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolSystemAndDayColorsMap() count], @"some color property may be left.");
+    NSAssert([WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolDayAndSystemColorsMap() count], @"some color property may be left.");
     id WZLColorValue = [targetView valueForKeyPath:WZLPropertyName];
     if (WZLColorValue) {
         [targetView setValue:WZLColorValue forKeyPath:sysPropertyName];

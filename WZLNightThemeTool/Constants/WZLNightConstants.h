@@ -61,18 +61,4 @@ static NSDictionary * WZLNightThemeToolDayAndSystemColorsMap() {
     return _WZLNightThemeToolSystemAndDayColorsMap;
 }
 
-
-static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
-    static NSDictionary *_WZLNightThemeToolNightAndDayColorsMap = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        _WZLNightThemeToolNightAndDayColorsMap = @{@"WZLNightBackgroundColor" : @"WZLDayBackgroundColor",
-                                                   @"WZLNightTintColor" : @"WZLDayTintColor",
-                                                   @"WZLNightTextColor" : @"WZLDayTextColor",
-                                                   @"WZLNightBarTintColor" : @"WZLDayBarTintColor"};
-    });
-    return _WZLNightThemeToolNightAndDayColorsMap;
-}
-
-
 #endif /* WZLNightConstants_h */
