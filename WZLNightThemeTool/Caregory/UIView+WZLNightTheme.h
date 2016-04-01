@@ -14,8 +14,6 @@
 
 @property (nonatomic, strong) UIColor *WZLNightTintColor;
 
-
-#pragma mark - internal
 @property (nonatomic, strong) UIColor *WZLDayBackgroundColor;
 
 @property (nonatomic, strong) UIColor *WZLDayTintColor;

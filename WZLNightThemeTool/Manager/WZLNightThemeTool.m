@@ -15,7 +15,8 @@
 
 @interface WZLNightThemeTool ()
 
-@property (nonatomic, strong) NSMutableDictionary <NSString *, NSMutableSet *> *registeredViewsDict;
+@property (nonatomic, strong) NSMutableDictionary <NSString *, NSMutableSet *> *registeredViewsNightColorDict;
+@property (nonatomic, strong) NSMutableDictionary <NSString *, NSMutableSet *> *registeredViewsDayColorDict;
 
 /**
  *  To record current mode
@@ -31,7 +32,8 @@
 - (instancetype)init
 {
     if (self = [super init]) {
-        _registeredViewsDict = [[NSMutableDictionary alloc] init];
+        _registeredViewsNightColorDict = [[NSMutableDictionary alloc] init];
+        _registeredViewsDayColorDict = [[NSMutableDictionary alloc] init];
         _currenThemeMode = WZLThemeModeNotInit;
     }
     return self;
@@ -50,29 +52,34 @@
 }
 
 #pragma mark - public interface
-+ (void)registerNightWithView:(id)view propertyName:(NSString *)propName
++ (void)registerWithView:(id)view propertyName:(NSString *)propName forNightColor:(BOOL)bForNight
 {
     NSParameterAssert(view);
     //view may be dealloced
     if (view == nil) {
         return;
     }
-    NSMutableSet *correspondingSet = SELF_INSTANCE.registeredViewsDict[propName];
+    NSMutableDictionary *refDictionary = bForNight ? SELF_INSTANCE.registeredViewsNightColorDict : SELF_INSTANCE.registeredViewsDayColorDict;
+    NSMutableSet *correspondingSet = refDictionary[propName];
     if (correspondingSet == nil) {
         correspondingSet = [NSMutableSet set];
     }
     [correspondingSet addObject:view];
-    [SELF_INSTANCE.registeredViewsDict setObject:correspondingSet forKey:propName];
+    [refDictionary setObject:correspondingSet forKey:propName];
 }
 
-+ (void)changeToNightRightNowIfNeedWithView:(id)view propertyName:(NSString *)propName
++ (void)changeThemeColorRightNowIfNeedWithView:(id)view propertyName:(NSString *)propName
 {
     NSParameterAssert(view);
-    if (SELF_INSTANCE.currenThemeMode == WZLThemeModeNight) {
-        NSString *systemColorPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[propName];
-        [SELF_INSTANCE backupDayColorBeforeChangingToNight:view systemPropertyName:systemColorPropertyName];
+    NSAssert(propName && [propName hasPrefix:@"WZL"], @"propName should have prefix WZL");
+    NSString *systemColorPropertyName = nil;
+    if (SELF_INSTANCE.currenThemeMode == WZLThemeModeNight && [propName hasPrefix:@"WZLNight"]) {
+        systemColorPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[propName];
         [SELF_INSTANCE applyColorWithTargetView:view wzlPropertyName:propName
                     systemPropertyName:systemColorPropertyName];
+    } else if (SELF_INSTANCE.currenThemeMode == WZLThemeModeDay && [propName hasPrefix:@"WZLDay"]) {
+        systemColorPropertyName = WZLNightThemeToolDayAndSystemColorsMap()[propName];
+        [SELF_INSTANCE applyColorWithTargetView:view wzlPropertyName:propName systemPropertyName:systemColorPropertyName];
     }
 }
 
@@ -94,20 +101,20 @@
 
 - (void)enumerateToChangeToNightTheme
 {
-    if (_currenThemeMode == WZLThemeModeNight || self.registeredViewsDict == nil || [self.registeredViewsDict count] == 0) {
+    if (_currenThemeMode == WZLThemeModeNight || self.registeredViewsNightColorDict == nil || [self.registeredViewsNightColorDict count] == 0) {
         return;
     }
     
-    [self.registeredViewsDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSMutableSet *registeredViewSet, BOOL *stop) {
-        NSString *WZLPropertyName = key;
+    [self.registeredViewsNightColorDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSMutableSet *registeredViewSet, BOOL *stop) {
+        NSString *nightPropertyName = key;
         [registeredViewSet enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
             if ([obj isKindOfClass:[UIView class]]) {
                 UIView *registeredView = (UIView *)obj;
                 if (registeredView) {
-                    NSString *systemColorPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[WZLPropertyName];
-                    [self backupDayColorBeforeChangingToNight:registeredView systemPropertyName:systemColorPropertyName];
+                    NSString *systemColorPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[nightPropertyName];
+                    //[self backupDayColorBeforeChangingToNight:registeredView systemPropertyName:systemColorPropertyName];
                     
-                    [self applyColorWithTargetView:registeredView wzlPropertyName:WZLPropertyName
+                    [self applyColorWithTargetView:registeredView wzlPropertyName:nightPropertyName
                                 systemPropertyName:systemColorPropertyName];
                 }
             }
@@ -117,20 +124,18 @@
 
 - (void)enumerateToChangeToDayTheme
 {
-    if (_currenThemeMode == WZLThemeModeDay || self.registeredViewsDict == nil || [self.registeredViewsDict count] == 0) {
+    if (_currenThemeMode == WZLThemeModeDay || self.registeredViewsNightColorDict == nil || [self.registeredViewsNightColorDict count] == 0) {
         return;
     }
-    [self.registeredViewsDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSMutableSet *registeredViewSet, BOOL *stop) {
-        NSString *WZLNightPropertyName = key;
-        NSString *WZLDayPropertyName = WZLNightThemeToolNightAndDayColorsMap()[WZLNightPropertyName];
-        NSAssert(WZLDayPropertyName, @"property name parse error");
+    [self.registeredViewsDayColorDict enumerateKeysAndObjectsUsingBlock:^(NSString *key, NSMutableSet *registeredViewSet, BOOL *stop) {
+        NSString *dayPropertyName = key;
         
         [registeredViewSet enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
             if ([obj isKindOfClass:[UIView class]]) {
                 UIView *registeredView = (UIView *)obj;
                 if (registeredView) {
-                    NSString *systemColorPropertyName = WZLNightThemeToolNightAndSystemColorsMap()[WZLNightPropertyName];
-                    [self applyColorWithTargetView:registeredView wzlPropertyName:WZLDayPropertyName
+                    NSString *systemColorPropertyName = WZLNightThemeToolDayAndSystemColorsMap()[dayPropertyName];
+                    [self applyColorWithTargetView:registeredView wzlPropertyName:dayPropertyName
                                 systemPropertyName:systemColorPropertyName];
                 }
             }
@@ -158,8 +163,7 @@
     NSParameterAssert(targetView);
     NSParameterAssert(WZLPropertyName);
     NSParameterAssert(sysPropertyName);
-    NSAssert([WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolNightAndSystemColorsMap() count] &&
-             [WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolSystemAndDayColorsMap() count], @"some color property may be left.");
+    NSAssert([WZLNightThemeToolNightAndSystemColorsMap() count] == [WZLNightThemeToolDayAndSystemColorsMap() count], @"some color property may be left.");
     id WZLColorValue = [targetView valueForKeyPath:WZLPropertyName];
     if (WZLColorValue) {
         [targetView setValue:WZLColorValue forKeyPath:sysPropertyName];
@@ -179,8 +183,8 @@
 - (WZLThemeMode)currenThemeMode
 {
     if (_currenThemeMode == WZLThemeModeNotInit) {
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_THEME_MODE]) {
-            return [[[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_THEME_MODE] integerValue];
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_THEME_MODE_WZLNIGHTTHEME]) {
+            return [[[NSUserDefaults standardUserDefaults] objectForKey:UD_KEY_THEME_MODE_WZLNIGHTTHEME] integerValue];
         }
         return WZLThemeModeDay;
     } else {
@@ -191,7 +195,7 @@
 - (void)setCurrenThemeMode:(WZLThemeMode)currenThemeMode
 {
     _currenThemeMode = currenThemeMode;
-    [[NSUserDefaults standardUserDefaults] setObject:@(currenThemeMode) forKey:UD_KEY_THEME_MODE];
+    [[NSUserDefaults standardUserDefaults] setObject:@(currenThemeMode) forKey:UD_KEY_THEME_MODE_WZLNIGHTTHEME];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 

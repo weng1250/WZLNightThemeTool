@@ -20,7 +20,7 @@ typedef NS_ENUM (NSInteger, WZLThemeMode)
 
 #pragma mark - key string define
 
-#define UD_KEY_THEME_MODE        @"UD_KEY_THEME_MODE"
+#define UD_KEY_THEME_MODE_WZLNIGHTTHEME        @"UD_KEY_THEME_MODE_WZLNIGHTTHEME"
 
 
 #pragma mark - map define
@@ -49,17 +49,16 @@ static NSDictionary * WZLNightThemeToolSystemAndDayColorsMap() {
     return _WZLNightThemeToolSystemAndDayColorsMap;
 }
 
-static NSDictionary * WZLNightThemeToolNightAndDayColorsMap() {
-    static NSDictionary *_WZLNightThemeToolNightAndDayColorsMap = nil;
+static NSDictionary * WZLNightThemeToolDayAndSystemColorsMap() {
+    static NSDictionary *_WZLNightThemeToolSystemAndDayColorsMap = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _WZLNightThemeToolNightAndDayColorsMap = @{@"WZLNightBackgroundColor" : @"WZLDayBackgroundColor",
-                                                   @"WZLNightTintColor" : @"WZLDayTintColor",
-                                                   @"WZLNightTextColor" : @"WZLDayTextColor",
-                                                   @"WZLNightBarTintColor" : @"WZLDayBarTintColor"};
+        _WZLNightThemeToolSystemAndDayColorsMap = @{@"WZLDayBackgroundColor" : @"backgroundColor",
+                                                    @"WZLDayTintColor" : @"tintColor",
+                                                    @"WZLDayTextColor" : @"textColor",
+                                                    @"WZLDayBarTintColor" : @"barTintColor"};
     });
-    return _WZLNightThemeToolNightAndDayColorsMap;
+    return _WZLNightThemeToolSystemAndDayColorsMap;
 }
-
 
 #endif /* WZLNightConstants_h */

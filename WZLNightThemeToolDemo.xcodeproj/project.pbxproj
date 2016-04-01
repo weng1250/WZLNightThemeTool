@@ -18,6 +18,7 @@
 		1953A03F1CAA5864007BD46C /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A03E1CAA5864007BD46C /* TableViewDataSource.m */; };
 		1953A0441CAA65B1007BD46C /* WZLNightTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1953A0431CAA65B1007BD46C /* WZLNightTheme.m */; };
 		1953A0461CAA7409007BD46C /* logo@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1953A0451CAA7409007BD46C /* logo@2x.jpg */; };
+		19E607821CAE4B6F00D047B9 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E607811CAE4B6F00D047B9 /* AppConfig.m */; };
 		19F0C73C1CA290F900936081 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73B1CA290F900936081 /* main.m */; };
 		19F0C73F1CA290F900936081 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C73E1CA290F900936081 /* AppDelegate.m */; };
 		19F0C7421CA290F900936081 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F0C7411CA290F900936081 /* FirstViewController.m */; };
@@ -63,6 +64,8 @@
 		1953A0421CAA65B1007BD46C /* WZLNightTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLNightTheme.h; sourceTree = "<group>"; };
 		1953A0431CAA65B1007BD46C /* WZLNightTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLNightTheme.m; sourceTree = "<group>"; };
 		1953A0451CAA7409007BD46C /* logo@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "logo@2x.jpg"; sourceTree = "<group>"; };
+		19E607801CAE4B6F00D047B9 /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		19E607811CAE4B6F00D047B9 /* AppConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
 		19EBE2971CA3843C00BBFE89 /* precompile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = precompile.pch; sourceTree = "<group>"; };
 		19F0C7371CA290F900936081 /* WZLNightThemeToolDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZLNightThemeToolDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F0C73B1CA290F900936081 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -170,8 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				1906CE321CA8DC5F00F8FA6F /* AppThemeColorDefines.h */,
-				19F0C73D1CA290F900936081 /* AppDelegate.h */,
-				19F0C73E1CA290F900936081 /* AppDelegate.m */,
+				19E607801CAE4B6F00D047B9 /* AppConfig.h */,
+				19E607811CAE4B6F00D047B9 /* AppConfig.m */,
 				19F0C7401CA290F900936081 /* FirstViewController.h */,
 				19F0C7411CA290F900936081 /* FirstViewController.m */,
 				1906CE291CA8DAAF00F8FA6F /* SecondViewController.h */,
@@ -181,9 +184,6 @@
 				1953A03D1CAA5864007BD46C /* TableViewDataSource.h */,
 				1953A03E1CAA5864007BD46C /* TableViewDataSource.m */,
 				19F0C7431CA290F900936081 /* Main.storyboard */,
-				19F0C7461CA290F900936081 /* Assets.xcassets */,
-				19F0C7481CA290F900936081 /* LaunchScreen.storyboard */,
-				19F0C74B1CA290F900936081 /* Info.plist */,
 				19F0C73A1CA290F900936081 /* Supporting Files */,
 			);
 			path = WZLNightThemeToolDemo;
@@ -192,6 +192,11 @@
 		19F0C73A1CA290F900936081 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				19F0C7461CA290F900936081 /* Assets.xcassets */,
+				19F0C7481CA290F900936081 /* LaunchScreen.storyboard */,
+				19F0C74B1CA290F900936081 /* Info.plist */,
+				19F0C73D1CA290F900936081 /* AppDelegate.h */,
+				19F0C73E1CA290F900936081 /* AppDelegate.m */,
 				1953A0451CAA7409007BD46C /* logo@2x.jpg */,
 				19F0C73B1CA290F900936081 /* main.m */,
 				19EBE2971CA3843C00BBFE89 /* precompile.pch */,
@@ -324,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1906CE2B1CA8DAAF00F8FA6F /* SecondViewController.m in Sources */,
+				19E607821CAE4B6F00D047B9 /* AppConfig.m in Sources */,
 				19F0C7421CA290F900936081 /* FirstViewController.m in Sources */,
 				1906CE0F1CA4E1BC00F8FA6F /* UINavigationBar+WZLNightTheme.m in Sources */,
 				1906CE081CA4E0B600F8FA6F /* UIView+WZLNightTheme.m in Sources */,
