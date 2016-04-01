@@ -13,9 +13,9 @@ static NSString *const WZLDayDidComesNotification = @"WZLDayDidComesNotification
 
 @interface WZLNightThemeTool : NSObject
 
-+ (void)registerNightWithView:(id)view propertyName:(NSString *)propName;
++ (void)registerWithView:(id)view propertyName:(NSString *)propName forNightColor:(BOOL)bForNight;
 
-+ (void)changeToNightRightNowIfNeedWithView:(id)view propertyName:(NSString *)propName;
++ (void)changeThemeColorRightNowIfNeedWithView:(id)view propertyName:(NSString *)propName;
 
 + (void)nightComes;
 

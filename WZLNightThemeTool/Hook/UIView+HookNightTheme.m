@@ -13,7 +13,7 @@
 #import "WZLNightThemeTool.h"
 #import "WZLNightDebug.h"
 
-#define WZLNightThemeToolSupportedColorProperties_UIView (@[@"WZLNightBackgroundColor",@"WZLDayBackgroundColor" @"WZLNightTintColor", @"WZLDayTintColor"])
+#define WZLNightThemeToolSupportedColorProperties_UIView (@[@"WZLNightBackgroundColor", @"WZLDayBackgroundColor", @"WZLNightTintColor", @"WZLDayTintColor"])
 #define WZLNightThemeToolSupportedColorProperties_UILabel (@[@"WZLNightTextColor", @"WZLDayTextColor"])
 #define WZLNightThemeToolSupportedColorProperties_UINavigationBar (@[@"WZLNightBarTintColor", @"WZLDayBarTintColor"])
 
@@ -93,7 +93,7 @@
 
 - (void)swizzle_setWZLDayBarTintColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLNightBarTintColor" forNightColor:NO];
+    [WZLNightThemeTool registerWithView:self propertyName:@"WZLDayBarTintColor" forNightColor:NO];
     [self swizzle_setWZLDayBarTintColor:color];
 }
 

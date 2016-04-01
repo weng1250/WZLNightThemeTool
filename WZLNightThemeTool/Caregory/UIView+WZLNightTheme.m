@@ -24,7 +24,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_TINTCOLOR = @"KEY_PROPERTY_WZLDAY_TIN
 - (void)setWZLNightBackgroundColor:(UIColor *)color
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLNIGHT_BACKGROUNDCOLOR, color, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [WZLNightThemeTool changeToNightRightNowIfNeedWithView:self propertyName:@"WZLNightBackgroundColor"];
+    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLNightBackgroundColor"];
 }
 
 - (UIColor *)WZLNightBackgroundColor
@@ -35,6 +35,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_TINTCOLOR = @"KEY_PROPERTY_WZLDAY_TIN
 - (void)setWZLNightTintColor:(UIColor *)WZLNightTintColor
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLNIGHT_TINTCOLOR, WZLNightTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLNightTintColor"];
 }
 
 - (UIColor *)WZLNightTintColor
@@ -45,6 +46,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_TINTCOLOR = @"KEY_PROPERTY_WZLDAY_TIN
 - (void)setWZLDayBackgroundColor:(UIColor *)WZLDayBackgroundColor
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLDAY_BACKGROUNDCOLOR, WZLDayBackgroundColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLDayBackgroundColor"];
 }
 
 - (UIColor *)WZLDayBackgroundColor
@@ -55,6 +57,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_TINTCOLOR = @"KEY_PROPERTY_WZLDAY_TIN
 - (void)setWZLDayTintColor:(UIColor *)WZLDayTintColor
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLDAY_TINTCOLOR, WZLDayTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLDayTintColor"];
 }
 
 - (UIColor *)WZLDayTintColor
