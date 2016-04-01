@@ -6,19 +6,19 @@
 //  Copyright © 2016年 Weng-Zilin(http://www.cnblogs.com/wengzilin/). All rights reserved.
 //
 
-#import "WZLNightTheme.h"
 #import "WZLNightThemeTool.h"
+#import "WZLNightThemeManager.h"
 
-@implementation WZLNightTheme
+@implementation WZLNightThemeTool
 
 + (void)nightComes
 {
-    [WZLNightThemeTool nightComes];
+    [WZLNightThemeManager nightComes];
 }
 
 + (void)dayComes
 {
-    [WZLNightThemeTool dayComes];
+    [WZLNightThemeManager dayComes];
 }
 
 @end

@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 #import "WZLNightCategoryImport.h"
 #import "NSObject+HookUtility.h"
-#import "WZLNightThemeTool.h"
+#import "WZLNightThemeManager.h"
 #import "WZLNightDebug.h"
 
 #define WZLNightThemeToolSupportedColorProperties_UIView (@[@"WZLNightBackgroundColor", @"WZLDayBackgroundColor", @"WZLNightTintColor", @"WZLDayTintColor"])
@@ -30,25 +30,25 @@
 - (void)swizzle_setWZLNightBackgroundColor:(UIColor *)color
 {
     //inject your code here
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLNightBackgroundColor" forNightColor:YES];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLNightBackgroundColor" forNightColor:YES];
     [self swizzle_setWZLNightBackgroundColor:color];
 }
 
 - (void)swizzle_setWZLDayBackgroundColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLDayBackgroundColor" forNightColor:NO];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLDayBackgroundColor" forNightColor:NO];
     [self swizzle_setWZLDayBackgroundColor:color];
 }
 
 - (void)swizzle_setWZLNightTintColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLNightTintColor" forNightColor:YES];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLNightTintColor" forNightColor:YES];
     [self swizzle_setWZLNightTintColor:color];
 }
 
 - (void)swizzle_setWZLDayTintColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLDayTintColor" forNightColor:NO];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLDayTintColor" forNightColor:NO];
     [self swizzle_setWZLDayTintColor:color];
 }
 
@@ -65,13 +65,13 @@
 //method name MUST be 'swizzle_setXXXX'. Please refer to 'swizzleSelectorsWithWZLNightSupportedColorsProperty:'
 - (void)swizzle_setWZLNightTextColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLNightTextColor" forNightColor:YES];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLNightTextColor" forNightColor:YES];
     [self swizzle_setWZLNightTextColor:color];
 }
 
 - (void)swizzle_setWZLDayTextColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLDayTextColor" forNightColor:NO];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLDayTextColor" forNightColor:NO];
     [self swizzle_setWZLDayTextColor:color];
 }
 
@@ -87,13 +87,13 @@
 
 - (void)swizzle_setWZLNightBarTintColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLNightBarTintColor" forNightColor:YES];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLNightBarTintColor" forNightColor:YES];
     [self swizzle_setWZLNightBarTintColor:color];
 }
 
 - (void)swizzle_setWZLDayBarTintColor:(UIColor *)color
 {
-    [WZLNightThemeTool registerWithView:self propertyName:@"WZLDayBarTintColor" forNightColor:NO];
+    [WZLNightThemeManager registerWithView:self propertyName:@"WZLDayBarTintColor" forNightColor:NO];
     [self swizzle_setWZLDayBarTintColor:color];
 }
 

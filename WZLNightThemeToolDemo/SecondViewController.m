@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-#import "WZLNightTheme.h"
+#import "WZLNightThemeTool.h"
 #import "AppThemeColorDefines.h"
 #import "TableViewDataSource.h"
 

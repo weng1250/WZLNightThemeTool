@@ -1,19 +1,19 @@
 //
-//  WZLNightThemeTool.m
+//  WZLNightThemeManager.m
 //  WZLNightThemeToolDemo
 //
 //  Created by wengzilin on 16/3/23.
 //  Copyright © 2016年 Weng-Zilin(http://www.cnblogs.com/wengzilin/). All rights reserved.
 //
 
-#import "WZLNightThemeTool.h"
+#import "WZLNightThemeManager.h"
 #import <objc/runtime.h>
 #import "WZLNightConstants.h"
 #import "WZLNightCategoryImport.h"
 
-#define SELF_INSTANCE               [WZLNightThemeTool sharedInstance]
+#define SELF_INSTANCE               [WZLNightThemeManager sharedInstance]
 
-@interface WZLNightThemeTool ()
+@interface WZLNightThemeManager ()
 
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSMutableSet *> *registeredViewsNightColorDict;
 @property (nonatomic, strong) NSMutableDictionary <NSString *, NSMutableSet *> *registeredViewsDayColorDict;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation WZLNightThemeTool
+@implementation WZLNightThemeManager
 
 @synthesize currenThemeMode = _currenThemeMode;
 
@@ -41,11 +41,11 @@
 
 + (instancetype)sharedInstance
 {
-    static WZLNightThemeTool *s_instance = nil;
+    static WZLNightThemeManager *s_instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (s_instance == nil) {
-            s_instance = [[WZLNightThemeTool alloc] init];
+            s_instance = [[WZLNightThemeManager alloc] init];
         }
     });
     return s_instance;

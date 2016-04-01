@@ -1,5 +1,5 @@
 //
-//  WZLNightThemeTool.h
+//  WZLNightThemeManager.h
 //  WZLNightThemeToolDemo
 //
 //  Created by wengzilin on 16/3/23.
@@ -11,7 +11,7 @@
 static NSString *const WZLNightDidComesNotification = @"WZLNightDidComesNotification";
 static NSString *const WZLDayDidComesNotification = @"WZLDayDidComesNotification";
 
-@interface WZLNightThemeTool : NSObject
+@interface WZLNightThemeManager : NSObject
 
 + (void)registerWithView:(id)view propertyName:(NSString *)propName forNightColor:(BOOL)bForNight;
 

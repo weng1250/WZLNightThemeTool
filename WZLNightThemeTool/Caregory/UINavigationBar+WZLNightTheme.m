@@ -8,7 +8,7 @@
 
 #import "UINavigationBar+WZLNightTheme.h"
 #import <objc/runtime.h>
-#import "WZLNightThemeTool.h"
+#import "WZLNightThemeManager.h"
 
 static NSString *const KEY_PROPERTY_WZLNIGHT_BARTINTCOLOR = @"KEY_PROPERTY_WZLNIGHT_BARTINTCOLOR";
 static NSString *const KEY_PROPERTY_WZLDAY_BARTINTCOLOR = @"KEY_PROPERTY_WZLDAY_BARTINTCOLOR";
@@ -19,7 +19,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_BARTINTCOLOR = @"KEY_PROPERTY_WZLDAY_
 - (void)setWZLDayBarTintColor:(UIColor *)WZLDayBarTintColor
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLDAY_BARTINTCOLOR, WZLDayBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLDayBarTintColor"];
+    [WZLNightThemeManager changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLDayBarTintColor"];
 }
 
 - (UIColor *)WZLDayBarTintColor
@@ -30,7 +30,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_BARTINTCOLOR = @"KEY_PROPERTY_WZLDAY_
 - (void)setWZLNightBarTintColor:(UIColor *)WZLNightBarTintColor
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLNIGHT_BARTINTCOLOR, WZLNightBarTintColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLNightBarTintColor"];
+    [WZLNightThemeManager changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLNightBarTintColor"];
 }
 
 - (UIColor *)WZLNightBarTintColor

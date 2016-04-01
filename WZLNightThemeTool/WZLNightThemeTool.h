@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "WZLNightCategoryImport.h"
 
-@interface WZLNightTheme : NSObject
+@interface WZLNightThemeTool : NSObject
 
 + (void)nightComes;
 

@@ -8,7 +8,7 @@
 
 #import "UILabel+WZLNightTheme.h"
 #import <objc/runtime.h>
-#import "WZLNightThemeTool.h"
+#import "WZLNightThemeManager.h"
 
 static NSString *const KEY_PROPERTY_WZLNIGHT_TEXTCOLOR = @"KEY_PROPERTY_WZLNIGHT_TEXTCOLOR";
 static NSString *const KEY_PROPERTY_WZLDAY_TEXTCOLOR = @"KEY_PROPERTY_WZLDAY_TEXTCOLOR";
@@ -19,7 +19,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_TEXTCOLOR = @"KEY_PROPERTY_WZLDAY_TEX
 - (void)setWZLNightTextColor:(UIColor *)WZLNightTextColor
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLNIGHT_TEXTCOLOR, WZLNightTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLNightTextColor"];
+    [WZLNightThemeManager changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLNightTextColor"];
 }
 
 - (UIColor *)WZLNightTextColor
@@ -30,7 +30,7 @@ static NSString *const KEY_PROPERTY_WZLDAY_TEXTCOLOR = @"KEY_PROPERTY_WZLDAY_TEX
 - (void)setWZLDayTextColor:(UIColor *)WZLDayTextColor
 {
     objc_setAssociatedObject(self, &KEY_PROPERTY_WZLDAY_TEXTCOLOR, WZLDayTextColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [WZLNightThemeTool changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLDayTextColor"];
+    [WZLNightThemeManager changeThemeColorRightNowIfNeedWithView:self propertyName:@"WZLDayTextColor"];
 }
 
 - (UIColor *)WZLDayTextColor

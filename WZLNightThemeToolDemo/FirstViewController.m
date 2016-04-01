@@ -7,7 +7,7 @@
 //
 
 #import "FirstViewController.h"
-#import "WZLNightTheme.h"
+#import "WZLNightThemeTool.h"
 #import "AppThemeColorDefines.h"
 #import "AppConfig.h"
 
@@ -60,10 +60,10 @@
 - (IBAction)onThemeSwitchClicked:(UISwitch *)sender
 {
     if (sender.on) {
-        [WZLNightTheme nightComes];
+        [WZLNightThemeTool nightComes];
         [AppConfig sharedInstance].isInNightMode = YES;
     } else {
-        [WZLNightTheme dayComes];
+        [WZLNightThemeTool dayComes];
         [AppConfig sharedInstance].isInNightMode = NO;
     }
 }
